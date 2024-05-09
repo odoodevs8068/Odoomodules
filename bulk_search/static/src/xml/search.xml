@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<templates>
+    <t t-name="SystraySearch">
+        <div class="new_icon">
+            <div class="button_element"/>
+            <div class="icon_div" id="popup">
+
+                <div class="search-box">
+                    <button class="btn-search search_view">
+                        <i class="fa fa-search"></i>
+                    </button>
+                    <input type="text" data-hotkey="shift+e" class="input-search input" id="input" placeholder="Type to Search..."/>
+                </div>
+                <div class="display_list" role="menu" style="display: none;" id="drop_list">
+                    <div class="dropdown_view"></div>
+                </div>
+            </div>
+        </div>
+    </t>
+</templates>
