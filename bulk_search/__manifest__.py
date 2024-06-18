@@ -1,11 +1,11 @@
 
 {
-    'name': 'Advance Bulk/Quick Search',
+    'name': 'Advance Bulk & Quick Search',
     'version': '1.2',
     'summary': 'Advance Quick Bulk Search Records',
     'description': 'The Advance Bulk, Quick Search module is designed to enhance the search functionality with features such as separate search, bulk search, quick bulk related search, allowing users to efficiently find relevant records across various models.',
     'sequence': 10,
-    'author': "Jagadish",
+    'author': "JD DEVS",
     'depends': ['base', 'base_setup'],
     'data': [
         'views/search_record.xml',
@@ -20,7 +20,7 @@
             'bulk_search/static/src/xml/search.xml'
         ],
     },
-    'price': 30.00,
+    'price': 15.00,
     'currency': 'USD',
     'images': ['static/description/assets/screenshots/banner.jpg'],
     'installable': True,
