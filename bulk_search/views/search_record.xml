@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <record id="search_record_tree_view" model="ir.ui.view">
+         <field name="name">search.record.tree</field>
+        <field name="model">search.record</field>
+        <field name="arch" type="xml">
+            <tree delete="1" editable='top' create="1">
+                <field name="models"/>
+                <field name="name"/>
+                <field name="model_name"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="action_search_record" model="ir.actions.act_window">
+        <field name="name">Seach Record</field>
+        <field name="res_model">search.record</field>
+        <field name="view_mode">tree</field>
+        <field name="view_id" ref="search_record_tree_view"/>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Configure To Search Records!
+            </p>
+        </field>
+    </record>
+
+<!--    <menuitem id="menu_search_record"-->
+<!--              name="Configure Search Record"-->
+<!--              action="action_search_record"-->
+<!--              sequence="20"/>-->
+
+    <record id="res_config_settings_nexmo_api_form_inherit" model="ir.ui.view">
+        <field name="name">Nexmo API</field>
+        <field name="model">res.config.settings</field>
+        <field name="inherit_id" ref="base_setup.res_config_settings_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//div[hasclass('settings')]/div[hasclass('app_settings_block')]/div[@id = 'languages']"
+                   position="after">
+                <h2>Configure Bulk Search Model</h2>
+                <div class="row mt16 o_settings_container" name="nexmo_api">
+                    <div class="col-12 col-lg-6 o_setting_box" id="gateway">
+                        <div class="o_setting_right_pane">
+                            <div class="mt8">
+                                <button name="button_view_configure_search_record" icon="fa-arrow-right" type="object"
+                                        string="Configure Search Model" class="btn-link"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </xpath>
+        </field>
+    </record>
+
+
+</odoo>
