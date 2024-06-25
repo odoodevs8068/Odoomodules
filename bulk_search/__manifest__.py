@@ -20,8 +20,6 @@
             'bulk_search/static/src/xml/search.xml'
         ],
     },
-    'price': 15.00,
-    'currency': 'USD',
     'images': ['static/description/assets/screenshots/banner.jpg'],
     'installable': True,
     'application': True,
